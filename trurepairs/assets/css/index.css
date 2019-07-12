@@ -242,11 +242,15 @@ body {
   height: 40%;
   margin-right: 5rem;
 }
-.container .inner h1,
-.container .inner h2,
-.container .inner h3,
-.container .inner h4 {
+.container h1,
+.container h2,
+.container h3,
+.container h4 {
   margin: 2rem 0;
+}
+.container > .inner {
+  width: 80%;
+  max-width: 125rem;
 }
 .container.style1 {
   background-color: #1D1F75;
