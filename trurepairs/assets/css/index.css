@@ -242,6 +242,16 @@ body {
   height: 40%;
   margin-right: 5rem;
 }
+.container h1,
+.container h2,
+.container h3,
+.container h4 {
+  margin: 2rem 0;
+}
+.container > .inner {
+  width: 80%;
+  max-width: 125rem;
+}
 .container.style1 {
   background-color: #1D1F75;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
