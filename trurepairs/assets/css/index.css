@@ -198,6 +198,22 @@ select:focus::-ms-value {
 select::-ms-expand {
   display: none;
 }
+table {
+  width: 100%;
+}
+table th {
+  font-size: 2.4rem;
+  border-bottom: 0.2rem solid rgba(255, 255, 255, 0.25);
+  padding: 1rem;
+  text-align: left;
+}
+table td {
+  border-top: 0.2rem solid rgba(255, 255, 255, 0.25);
+  padding: 1rem;
+}
+table tbody tr:nth-of-type(odd) {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}
 header {
   display: flex;
   flex-direction: column;
