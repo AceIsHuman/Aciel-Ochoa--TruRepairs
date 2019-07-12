@@ -1,0 +1,43 @@
+body {
+    background-color: @bg;
+    background-image: linear-gradient(to top, fadeout(@bg, 20%), fadeout(@bg, 20%)), url(../../images/bg.png);
+    background-size: auto, cover;
+    background-attachment: fixed, fixed;
+    background-position: center, center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem;
+    
+    img {
+        border-radius: 50%;
+        width: 40%;
+        height: 40%;
+        margin-right: 5rem;
+    }
+    
+    &.style1 {
+        background-color: @accent;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    }
+    
+    &.columns {
+        flex-direction: row;        
+        justify-content: space-around;
+        
+        .inner {
+            display: flex;
+            align-items: center;
+            width: 45%;
+        }
+    }
+}
+
+.headline {
+    h1, h2, h3, h4 {
+        .underline;
+    }
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <script src="https://kit.fontawesome.com/5e345b4043.js"></script>
+    <title>TruRepairs | Electronics Repair Service</title>
+</head>
+<body>
+    <header class="home">
+        <div class="inner">
+            <img src="./images/logo_svg.svg" alt="TruRepairs">
+            <span class="tagline">
+                <i class="fas fa-mobile-alt"></i>
+                <p>The Affordable Solution</p>
+            </span>
+        </div>
+    </header>
+    <section class="main-content">
+        <section class="container columns style1">
+            <div class="inner">
+                <img class="image" src="images/pic02.jpg" alt="picture of opened ipad" />
+                <div class="content">
+                    <h3 class="major">Electronics Repair Service</h3>
+                    <p>Our main goal is getting your device back to working condition! We know life can be tough without access to your electronics, so we strive to have your device ready as quick as possible.</p>
+                </div>
+            </div>
+            <div class="inner">
+                <img class="image" src="images/pic01.jpg" alt="Aciel Ochoa" />
+                <div class="content">
+                    <h3 class="major">Who's fixing my device?</h3>
+                    <p>Aciel "Ace" Ochoa has been servicing cell phones, tablets, and computers for over 5 years. He has serviced both Android and iOS devices, and worked on a number of laptops. Now, Ace has built trust with many customers in keeping their electronics in great working condition!</p>
+                </div>
+            </div>
+        </section>
+        <section class="container pricing">
+            <div class="inner">
+                <div class="headline">
+                    <h3>Pricing</h3>
+                    <p>Here are some prices for the most common repairs.</p>
+                </div>
+
+                <div class="dropdowns">
+                    <label for="select-device">Select Your Device</label>
+                    <select class="select-device" onchange="selectMake(this)">
+                        <option value="">-</option>
+                        <option value="iphone">Apple iPhone</option>
+                        <option value="ipad">Apple iPad</option>
+                        <option value="galaxy">Samsung Galaxy</option>
+                    </select>
+
+                    <!-- iPhone Dropdown -->
+                    <select class="model-dropdown hidden" data-model-type="iphone">
+                        <option value="">-</option>
+                        <option value="ip5">iPhone 5</option>
+                        <option value="ip5c">iPhone 5c</option>
+                        <option value="ip5s">iPhone 5s</option>
+                        <option value="ipse">iPhone SE</option>
+                        <option value="ip6">iPhone 6</option>
+                        <option value="ip6p">iPhone 6 Plus</option>
+                        <option value="ip6s">iPhone 6s</option>
+                        <option value="ip6sp">iPhone 6s Plus</option>
+                        <option value="ip7">iPhone 7</option>
+                        <option value="ip7p">iPhone 7 Plus</option>
+                        <option value="ip8">iPhone 8</option>
+                        <option value="ip8p">iPhone 8 Plus</option>
+                    </select>
+
+                    <!-- iPad Dropdown -->
+                    <select class="model-dropdown hidden" data-model-type="ipad">
+                        <option value="">-</option>
+                        <option value="ipm">iPad mini</option>
+                        <option value="ipm2">iPad mini 2</option>
+                    </select>
+
+                    <!-- Samsung Galaxy Dropdown -->
+                    <select class="model-dropdown hidden" data-model-type="galaxy">
+                        <option value="">-</option>
+                        <option value="sgs9">Samsung Galaxy S9</option>
+                        <option value="sgs6a">Samsung Galaxy S6 Active</option>
+                        <option value="sgn5">Samsung Galaxy Note 5</option>
+                    </select>
+                </div>
+
+                <div class="table-content">
+                    <section class="placeholder">
+                        <h1>please select your device model</h1>
+                        <p>Device not listed? Contact Us</p>
+                    </section>
+                    <section id="pricing-table" class ="hidden">
+                        <h3 class="model"></h3>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Repair</th>
+                                        <th>Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="na" data-repair="screenRepair">
+                                        <td>Screen Replacement</td>
+                                        <td class="repair-cost" data-repair="screenRepair"></td>
+                                    </tr>
+                                    <tr class="na" data-repair="batteryRepair">
+                                        <td>Battery Replacement</td>
+                                        <td class="repair-cost" data-repair="batteryRepair"></td>
+                                    </tr>
+                                    <tr class="na" data-repair="chargingPortRepair">
+                                        <td>Charging Port Replacement</td>
+                                        <td class="repair-cost" data-repair="chargingPortRepair"></td>
+                                    </tr>
+                                    <tr class="na" data-repair="earspeakerRepair">
+                                        <td>Earpiece Speaker Replacement</td>
+                                        <td class="repair-cost" data-repair="earspeakerRepair"></td>
+                                    </tr>
+                                    <tr class="na" data-repair="frontCameraRepair">
+                                        <td>Front Facing Camera Replacement</td>
+                                        <td class="repair-cost" data-repair="frontCameraRepair"></td>
+                                    </tr>
+                                    <tr class="na" data-repair="backCameraRepair">
+                                        <td>Rear Camera Replacement</td>
+                                        <td class="repair-cost" data-repair="backCameraRepair"></td>
+                                    </tr>
+                                    <tr class="na" data-repair="backGlassRepair">
+                                        <td>Back Glass Replacement</td>
+                                        <td class="repair-cost" data-repair="backGlassRepair"></td>
+                                    </tr>
+                                    <tr class="na" data-repair="lcdRepair">
+                                        <td>LCD & Digitizer Replacement</td>
+                                        <td class="repair-cost" data-repair="lcdRepair"></td>
+                                    </tr>
+                                    <tr class="na" data-repair="digitizerRepair">
+                                        <td>Digitizer Replacement</td>
+                                        <td class="repair-cost" data-repair="digitizerRepair"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </section>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,29 @@
+// Dropdowns
+
+select {
+    -webkit-appearance: none;
+    background-image: url('./images/arrow-down.svg');
+    background-size: 1.25rem;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 1rem) center;
+    padding: 1rem;
+    text-overflow: ellipsis;
+    background-color: @border-bg;
+    border: solid 2px @border;
+    border-radius: 2rem;
+
+    option {
+        color: @fg;
+        background: @bg;
+    }
+
+    &:focus {
+        &::-ms-value {
+            background-color: transparent;
+        }
+    }
+
+    &::-ms-expand {
+        display: none;
+    }
+}
