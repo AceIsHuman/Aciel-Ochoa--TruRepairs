@@ -183,6 +183,7 @@ select {
   background-color: rgba(255, 255, 255, 0.025);
   border: solid 2px rgba(255, 255, 255, 0.125);
   border-radius: 2rem;
+  margin: 1rem 0;
 }
 select option {
   color: #ffffff;
@@ -272,7 +273,12 @@ body {
   padding-bottom: 0.3rem;
   border-bottom: 0.3rem solid rgba(255, 255, 255, 0.325);
 }
+.pricing p {
+  margin: 2rem 0;
+}
 .pricing .dropdowns {
   display: flex;
   flex-direction: column;
+  width: 75%;
+  margin: 0 auto;
 }
