@@ -292,6 +292,10 @@ body {
   padding-bottom: 0.3rem;
   border-bottom: 0.3rem solid rgba(255, 255, 255, 0.325);
 }
+.hidden {
+  transition: opacity 0.5s;
+  opacity: 0;
+}
 .pricing p {
   margin: 2rem 0;
 }
@@ -300,6 +304,13 @@ body {
   flex-direction: column;
   width: 75%;
   margin: 0 auto;
+}
+.pricing .dropdowns select {
+  transition: opacity 0.5s;
+  margin-bottom: 1em;
+}
+.pricing .dropdowns select.hidden {
+  display: none;
 }
 .pricing .table-content .placeholder {
   position: relative;

@@ -10,3 +10,12 @@
     padding-bottom: 0.3rem;
     border-bottom: 0.3rem solid fadein(@border, 20%);
 }
+
+.hide(@timing: 0.5s) {
+    transition: opacity @timing;
+    opacity: 0;
+}
+
+.hideDisplay() {
+    display: none;
+}

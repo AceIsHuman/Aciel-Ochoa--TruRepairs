@@ -8,6 +8,15 @@
         flex-direction: column;
         width: 75%;
         margin: 0 auto;
+
+        select {
+            transition: opacity 0.5s;
+            margin-bottom: 1em;
+
+            &.hidden {
+                .hideDisplay();
+            }
+        }
     }
 
     .table-content {
