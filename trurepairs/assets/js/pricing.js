@@ -25,3 +25,23 @@ const devices = {
     sgs6a:  {type:'Samsung', model: 'Galaxy S6 Active', id: 'sgs6a', screenRepair: 130},
     sgn5:   {type: 'Samsung', model: 'Galaxy Note 5', id: 'sgn5', screenRepair: 160},
 }
+
+class PricingSection {
+    constructor(pricingSection) {
+        this.pricingSection = pricingSection;
+        this.table = this.pricingSection.querySelector('#pricing-table');
+        this.placeholder = this.pricingSection.querySelector('.placeholder');
+        this.dropdowns = this.pricingSection.querySelector('.dropdowns');
+        this.selectDeviceDrop = this.dropdowns.querySelector('.select-device');
+        this.modelDrops = this.dropdowns.querySelectorAll('.model-dropdown');
+
+        this.selectDeviceDrop.addEventListener('change', this.selectDeviceType.bind(this));
+    }
+
+    selectDeviceType(event) {
+        console.log(event.target.value);
+    }
+}
+
+const pricingSection = document.querySelector('.pricing');
+new PricingSection(pricingSection);
