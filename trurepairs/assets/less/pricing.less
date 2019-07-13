@@ -33,11 +33,27 @@
             transition: opacity 0.2s;
 
             &.hidden {
-                @include hide;
+                // position: absolute;
+                .hide();
             }
 
             p {
                 margin-bottom: 0;
+            }
+        }
+
+        #pricing-table {
+            position: relative;
+            transition: left 0.5s;
+            left: 0;
+            
+            &.hidden {
+                transition: left 0.5s, opacity 0.5s;
+                left: -120%;
+            }
+
+            .na {
+                .hideDisplay();
             }
         }
     }

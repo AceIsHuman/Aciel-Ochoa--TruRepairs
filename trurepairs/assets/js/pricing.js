@@ -30,6 +30,7 @@ class PricingSection {
     constructor(pricingSection) {
         this.pricingSection = pricingSection;
         this.table = this.pricingSection.querySelector('#pricing-table');
+        this.rows = this.table.querySelectorAll('tbody tr');
         this.placeholder = this.pricingSection.querySelector('.placeholder');
         this.dropdowns = this.pricingSection.querySelector('.dropdowns');
         this.selectDeviceDrop = this.dropdowns.querySelector('.select-device');
@@ -38,8 +39,17 @@ class PricingSection {
         this.selectDeviceDrop.addEventListener('change', this.selectDeviceType.bind(this));
     }
 
-    selectDeviceType(event) {
-        console.log(event.target.value);
+    selectDeviceType(e) {
+        let selection = e.target.value;
+        if (selection === '') {
+            this.table.classList.add('hidden');
+            this.placeholder.classList.remove('hidden');
+            this.rows.forEach(box => box.classList.add('na'));
+        }
+        this.modelDrops.forEach(drop => {
+            drop.classList.add('hidden');
+            if (drop.dataset.modelType === selection) drop.classList.remove('hidden');
+        });
     }
 }
 

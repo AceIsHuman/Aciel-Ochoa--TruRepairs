@@ -325,8 +325,21 @@ body {
   transition: opacity 0.2s;
 }
 .pricing .table-content .placeholder.hidden {
-  @include hide;
+  transition: opacity 0.5s;
+  opacity: 0;
 }
 .pricing .table-content .placeholder p {
   margin-bottom: 0;
+}
+.pricing .table-content #pricing-table {
+  position: relative;
+  transition: left 0.5s;
+  left: 0;
+}
+.pricing .table-content #pricing-table.hidden {
+  transition: left 0.5s, opacity 0.5s;
+  left: -120%;
+}
+.pricing .table-content #pricing-table .na {
+  display: none;
 }
